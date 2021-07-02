@@ -40,7 +40,7 @@ namespace magic
             }
             else
             {
-                //Debug.WriteLine("String is empty");
+                
                 MessageBox.Show("Name was left empty or Character level is not 1-20", "Alert", MessageBoxButton.OK, MessageBoxImage.Information);
 
             }

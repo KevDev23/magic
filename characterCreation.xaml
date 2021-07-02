@@ -33,9 +33,9 @@
         <Label x:Name="levellable" Content="Enter new character level here" Grid.Column="4" Margin="450,114,110,233" Grid.Row="6" VerticalContentAlignment="Bottom" />
         <TextBox x:Name="level" Width="200" HorizontalAlignment="Right" Grid.Column="4" Margin="0,175,106,165" Grid.Row="6" />
 
-        <Button x:Name="Accept" Grid.Column="4" Grid.Row="6" VerticalAlignment="Bottom" Content="Accept" Height="36" Margin="252,0,364,62" Click="NewCharacter_accept"></Button>
+        <Button x:Name="Accept" Grid.Column="4" Grid.Row="6" VerticalAlignment="Bottom" Content="Accept" Height="36" Margin="172,0,444,66" Click="NewCharacter_accept"></Button>
         <Button Content="Button"/>
-        <Button Content="Back" Grid.Column="4" HorizontalAlignment="Left" Margin="419,294,0,0" Grid.Row="6" VerticalAlignment="Top" Height="38" Width="144" Click="BackToMain"/>
+        <Button Content="Back" Grid.Column="4" HorizontalAlignment="Left" Margin="477,291,0,0" Grid.Row="6" VerticalAlignment="Top" Height="38" Width="144" Click="BackToMain"/>
 
     </Grid>
 </Window>

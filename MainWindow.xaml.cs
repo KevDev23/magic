@@ -28,7 +28,7 @@ namespace magic
         //For making new character to save
         private void NewCharacter_Click(object sender, RoutedEventArgs e)
         {
-
+            
         }
 
         //load a character

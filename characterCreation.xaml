@@ -34,8 +34,8 @@
         <TextBox x:Name="level" Width="200" HorizontalAlignment="Right" Grid.Column="4" Margin="0,175,106,165" Grid.Row="6" />
 
         <Button x:Name="Accept" Grid.Column="4" Grid.Row="6" VerticalAlignment="Bottom" Content="Accept" Height="36" Margin="172,0,444,66" Click="NewCharacter_accept"></Button>
-        <Button Content="Button"/>
-        <Button Content="Back" Grid.Column="4" HorizontalAlignment="Left" Margin="477,291,0,0" Grid.Row="6" VerticalAlignment="Top" Height="38" Width="144" Click="BackToMain"/>
+
+        <Button Content="Back" Grid.Column="4" Margin="0,0,133,71" Grid.Row="6" VerticalAlignment="Bottom" Height="36" Click="BackToMain" HorizontalAlignment="Right" Width="144"/>
 
     </Grid>
 </Window>

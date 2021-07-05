@@ -14,7 +14,7 @@ namespace magic
         {
             using (System.Data.IDbConnection conn = new SQLiteConnection(loadConnStr()))
             {
-                var retrieved = conn.Query<CasterModel>("Select from * casters", new DynamicParameters());
+                var retrieved = conn.Query<CasterModel>("select * from casters", new DynamicParameters());
                 return retrieved.ToList();
             }
         }

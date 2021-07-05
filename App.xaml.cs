@@ -13,5 +13,6 @@ namespace magic
     /// </summary>
     public partial class App : Application
     {
+    
     }
 }

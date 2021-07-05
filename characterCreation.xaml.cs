@@ -13,6 +13,10 @@ using System.Diagnostics;
 
 namespace magic
 {
+    /*TODO:
+        Handling if a user inputs a decimal 
+    */
+
     /// <summary>
     /// Interaction logic for characterCreation.xaml
     /// </summary>
@@ -36,13 +40,13 @@ namespace magic
                 newCharacter.determineMaxMP();
                 newCharacter.mp = newCharacter.maxMP;
 
+                SqliteDataAccess.saveChar(newCharacter);//write to data base
+
                 Debug.WriteLine("name,level,maxmp " + newCharacter.characterName + " " + newCharacter.level + " " + newCharacter.mp);
             }
             else
             {
-                
                 MessageBox.Show("Name was left empty or Character level is not 1-20", "Alert", MessageBoxButton.OK, MessageBoxImage.Information);
-
             }
         }
 

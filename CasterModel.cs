@@ -4,7 +4,7 @@ using System.Text;
 
 namespace magic
 {
-    class CasterModel
+    public class CasterModel
     {
     /// <summary>
     /// Character level, for display purposes and determining maxHP

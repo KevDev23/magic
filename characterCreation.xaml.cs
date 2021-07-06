@@ -32,21 +32,30 @@ namespace magic
             
             CasterModel newCharacter = new CasterModel();
 
-            //initialize the character's name, level, maxMP, and mp
-            if (!(name.Text.Equals(String.Empty)) && checkLevelRange(Int32.Parse(level.Text)))
+            /*initialize the character's name, level, maxMP, and mp
+             *Try catch stops input such as 8.5 and the if statement stops empty string input and anything other than an int between 1-20 from being entered 
+             **/
+            try 
             {
-                newCharacter.characterName = name.Text;
-                newCharacter.level = Int32.Parse(level.Text);
-                newCharacter.determineMaxMP();
-                newCharacter.mp = newCharacter.maxMP;
+                if (!(name.Text.Equals(String.Empty)) && checkLevelRange(Int32.Parse(level.Text)))
+                {
+                    newCharacter.characterName = name.Text;
+                    newCharacter.level = Int32.Parse(level.Text);
+                    newCharacter.determineMaxMP();
+                    newCharacter.mp = newCharacter.maxMP;
 
-                SqliteDataAccess.saveChar(newCharacter);//write to data base
+                    SqliteDataAccess.saveChar(newCharacter);//write to data base
 
-                Debug.WriteLine("name,level,maxmp " + newCharacter.characterName + " " + newCharacter.level + " " + newCharacter.mp);
+                    Debug.WriteLine("name,level,maxmp " + newCharacter.characterName + " " + newCharacter.level + " " + newCharacter.mp);
+                }
+                else
+                {
+                    characterCreationError();
+                }
             }
-            else
+            catch(Exception userin)
             {
-                MessageBox.Show("Name was left empty or Character level is not 1-20", "Alert", MessageBoxButton.OK, MessageBoxImage.Information);
+                characterCreationError();
             }
         }
 
@@ -62,6 +71,11 @@ namespace magic
                 return true;
 
             return false;
+        }
+
+        public static void characterCreationError()
+        {
+            MessageBox.Show("Name was left empty or Character level is not 1-20", "Alert", MessageBoxButton.OK, MessageBoxImage.Information);
         }
     }
 }

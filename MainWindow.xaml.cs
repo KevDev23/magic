@@ -36,12 +36,11 @@ namespace magic
         //load a character
         private void LoadCharacter_Click(object sender, RoutedEventArgs e)
         {
-            List<CasterModel> test = new List<CasterModel>();
+            //List<CasterModel> test;// = new List<CasterModel>();
 
-            test = SqliteDataAccess.loadChar();
-            
-            Debug.WriteLine("loadingTest name,mp,level "+test[0].characterName+" "+test[0].mp+" "+test[0].level);
-
+            //test = SqliteDataAccess.loadChar();
+           
+           
         }
     }
 }

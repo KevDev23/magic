@@ -25,7 +25,7 @@ namespace magic
         /// The maximum mp a character can have determined by level
         /// </summary>
         public string characterName  { get; set; }
-        
+  
         /// <summary>
         /// sets the maxMP based on level.
         /// </summary>

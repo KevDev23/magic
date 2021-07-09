@@ -36,10 +36,8 @@ namespace magic
         //load a character
         private void LoadCharacter_Click(object sender, RoutedEventArgs e)
         {
-            //List<CasterModel> test;// = new List<CasterModel>();
-
-            //test = SqliteDataAccess.loadChar();
-           
+            characterLoad loadWin = new characterLoad();
+            loadWin.Show();
            
         }
     }

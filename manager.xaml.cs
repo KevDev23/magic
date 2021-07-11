@@ -39,15 +39,10 @@ namespace magic
         //initializes the mana bar(manaDisplay) based on percentage of mag.maxMP
         public void setMana(CasterModel mage)
         {
-           
            manaDisplay.Value = ((double)mage.mp / mage.maxMP) * 100;//manabar gives percentage of spell points left
-           Debug.WriteLine((double)(mage.mp / mage.maxMP * 100));
-        }
+           Debug.WriteLine("setMana: "+(double)(mage.mp / mage.maxMP * 100));
+            Debug.WriteLine("setMana - current MP is " + mage.mp);
 
-        public void decrementMana(int subtract)
-        {
-            mage.mp -= subtract;
-            setMana(mage);
         }
 
         public void incrementMana(int add)
@@ -58,49 +53,12 @@ namespace magic
 
         private void cast1_Click(object sender, RoutedEventArgs e)
         {
-            decrementMana(2);
+            /*On click of any of the buttons used to cast spells the tag of the corresponding button is turned into a string which 
+             * is pased to Int32.Parse() so its a int at the end of all that
+             */
+            mage.mp -= Int32.Parse((string)((Button)sender).Tag);
+            setMana(mage);
         }
 
-        private void cast2_Click(object sender, RoutedEventArgs e)
-        {
-            decrementMana(3);
-        }
-
-        private void cast3_Click(object sender, RoutedEventArgs e)
-        {
-            decrementMana(5);
-        }
-
-        private void cast4_Click(object sender, RoutedEventArgs e)
-        {
-            decrementMana(6);
-        }
-
-        private void cast5_Click(object sender, RoutedEventArgs e)
-        {
-            decrementMana(7);
-        }
-
-        private void cast6_Click(object sender, RoutedEventArgs e)
-        {
-            decrementMana(9);
-        }
-
-        private void cast7_Click(object sender, RoutedEventArgs e)
-        {
-            decrementMana(10);
-        }
-
-        private void cast8_Click(object sender, RoutedEventArgs e)
-        {
-            decrementMana(11);
-        }
-
-        private void cast9_Click(object sender, RoutedEventArgs e)
-        {
-            decrementMana(13);
-        }
-
-       
     }
 }

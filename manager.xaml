@@ -18,19 +18,19 @@
                     <TranslateTransform X="0.49"/>
                 </TransformGroup>
             </StackPanel.RenderTransform>
-            <Button x:Name = "cast1" Content = "1st" Margin = "10" Width = "120" Height = "30" Click="cast1_Click"/>
-            <Button x:Name = "cast2" Content = "2th" Margin = "10" Width = "120" Height = "30" Click="cast2_Click"/>
-            <Button x:Name = "cast3" Content = "3th" Margin = "10" Width = "120" Height = "30" Click="cast3_Click"/>
+            <Button x:Name = "cast1" Content = "1st" Margin = "10" Width = "120" Height = "30" Tag="2" Click="cast1_Click"/>
+            <Button x:Name = "cast2" Content = "2th" Margin = "10" Width = "120" Height = "30" Tag="3" Click="cast1_Click"/>
+            <Button x:Name = "cast3" Content = "3th" Margin = "10" Width = "120" Height = "30" Tag="5" Click="cast1_Click"/>
         </StackPanel>
         <StackPanel Margin="10,161,354,197" Orientation="Horizontal">
-            <Button x:Name = "cast4" Content = "4nd" Margin = "10" Width = "120" Height = "30" Click="cast4_Click"/>
-            <Button x:Name = "cast5" Content = "5th" Margin = "10" Width = "120" Height = "30" Click="cast5_Click"/>
-            <Button x:Name = "cast6" Content = "6th" Margin = "10" Width = "120" Height = "30" Click="cast6_Click"/>
+            <Button x:Name = "cast4" Content = "4nd" Margin = "10" Width = "120" Height = "30" Tag="6" Click="cast1_Click"/>
+            <Button x:Name = "cast5" Content = "5th" Margin = "10" Width = "120" Height = "30" Tag="7" Click="cast1_Click"/>
+            <Button x:Name = "cast6" Content = "6th" Margin = "10" Width = "120" Height = "30" Tag="9" Click="cast1_Click"/>
         </StackPanel>
         <StackPanel Margin="10,217,354,141" Orientation="Horizontal">
-            <Button x:Name = "cast7" Content = "7nd" Margin = "10" Width = "120" Height = "30" Click="cast7_Click"/>
-            <Button x:Name = "cast8" Content = "8th" Margin = "10" Width = "120" Height = "30" Click="cast8_Click"/>
-            <Button x:Name = "cast9" Content = "9th" Margin = "10" Width = "120" Height = "30" Click="cast9_Click"/>
+            <Button x:Name = "cast7" Content = "7th" Margin = "10" Width = "120" Height = "30" Tag="10" Click="cast1_Click"/>
+            <Button x:Name = "cast8" Content = "8th" Margin = "10" Width = "120" Height = "30" Tag="11" Click="cast1_Click"/>
+            <Button x:Name = "cast9" Content = "9th" Margin = "10" Width = "120" Height = "30" Tag="13" Click="cast1_Click"/>
         </StackPanel>
     </Grid>
 </Window>

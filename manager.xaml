@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="manager" Height="450" Width="800">
     <Grid>
-        <ProgressBar Name="manaDisplay" HorizontalAlignment="Left" Height="23" Margin="234,37,0,0" VerticalAlignment="Top" Width="298"/>
+        <ProgressBar Name="manaDisplay" HorizontalAlignment="Left" Height="23" Margin="241,36,0,0" VerticalAlignment="Top" Width="298" Foreground="#FF0047AB" Background="#FFE6E6E6"/>
 
     </Grid>
 </Window>

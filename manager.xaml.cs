@@ -63,5 +63,21 @@ namespace magic
             mage.mp = mage.maxMP;
             setMana(mage);
         }
+
+        private void recover_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                if(mage.mp < mage.maxMP)
+                {
+                    incrementMana(Int32.Parse(recoverInput.Text));
+                }
+                
+            }
+            catch(Exception recoveryError)
+            {
+                MessageBox.Show("Please enter a integer","Alert", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+        }
     }
 }

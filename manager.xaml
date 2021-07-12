@@ -32,9 +32,10 @@
             <Button x:Name = "cast8" Content = "8th" Margin = "10" Width = "120" Height = "30" Tag="11" Click="cast1_Click"/>
             <Button x:Name = "cast9" Content = "9th" Margin = "10" Width = "120" Height = "30" Tag="13" Click="cast1_Click"/>
         </StackPanel>
-        <StackPanel Margin="12,303,352,55" Orientation="Horizontal">
+        <StackPanel Margin="16,293,354,65" Orientation="Horizontal">
             <Button x:Name = "longRest" Content = "Long Rest" Width = "120" Height = "30" Click="longRest_Click" Margin="10" />
-
+            <Button x:Name="recover" Margin="10" Content="Recover" Width="120" Height="30" Click="recover_Click" />
+            <TextBox x:Name="recoverInput" Margin="10" Text="Enter SP to recover" TextWrapping="Wrap" VerticalAlignment="Center" Width="120" Height="30" />
         </StackPanel>
         <TextBlock x:Name="name" HorizontalAlignment="Left" Margin="80,36,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Algerian" FontSize="18"/>
         <TextBlock x:Name="mp" HorizontalAlignment="Left" Margin="561,36,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Algerian" FontSize="18"/>

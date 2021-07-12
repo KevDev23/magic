@@ -24,22 +24,20 @@ namespace magic
         {
             InitializeComponent();
 
-            //access caster from here?
             mage = selected;
             mage.determineMaxMP();
-            //manaDisplay.Foreground = Color.Blue;
+            updateText(mage);
             setMana(mage);
-            name.Text = mage.characterName;
-            //nameBlock(mage);
+
         }
 
         //initializes the mana bar(manaDisplay) based on percentage of mag.maxMP and text display
         public void setMana(CasterModel mage)
         {
            manaDisplay.Value = ((double)mage.mp / mage.maxMP) * 100;//manabar gives percentage of spell points left
-           mp.Text = mage.mp.ToString() + "/" + mage.maxMP.ToString();
+           updateText(mage);
            Debug.WriteLine("setMana: "+(double)(mage.mp / mage.maxMP * 100));
-            Debug.WriteLine("setMana - current MP is " + mage.mp);
+           Debug.WriteLine("setMana - current MP is " + mage.mp);
 
         }
 
@@ -78,6 +76,45 @@ namespace magic
             {
                 MessageBox.Show("Please enter a integer","Alert", MessageBoxButton.OK, MessageBoxImage.Information);
             }
+        }
+
+        private void levelup_Click(object sender, RoutedEventArgs e)
+        {
+            if(mage.level < 20)
+                mage.level++;
+
+           mage.determineMaxMP();
+           updateText(mage);
+
+
+        }
+
+        private void leveldown_Click(object sender, RoutedEventArgs e)
+        {
+            if (mage.level > 1)
+                mage.level--;
+            mage.determineMaxMP();
+
+            if(mage.mp > mage.maxMP)//if the resource is greater than the max set the resource to the max
+            {
+                mage.mp = mage.maxMP;
+            }
+
+            updateText(mage);
+
+        }
+
+        private void saveData_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        public void updateText(CasterModel mage)
+        {
+            //setMana(mage);
+            name.Text = mage.characterName;
+            level.Text = "Level: " + mage.level.ToString();
+            mp.Text = mage.mp.ToString() + "/" + mage.maxMP.ToString();
         }
     }
 }

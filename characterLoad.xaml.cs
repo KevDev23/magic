@@ -33,21 +33,23 @@ namespace magic
         private void Load_Click(object sender, RoutedEventArgs e)
         {
             CasterModel selected = new CasterModel();
-            selected = roster[charList.Items.IndexOf(charList.SelectedItem)];
+            
 
             try
             {
                 selected = roster[charList.Items.IndexOf(charList.SelectedItem)];
-                System.Diagnostics.Debug.WriteLine("selected:" + selected.characterName + " mp:" + selected.mp + " level:" + selected.level);              
+                System.Diagnostics.Debug.WriteLine("selected:" + selected.characterName + " mp:" + selected.mp + " level:" + selected.level);
+
+                manager sheet = new manager(selected);
+                sheet.Show();
+                this.Close();
             }
             catch(Exception loadError)
             {
                 MessageBox.Show("Something went wrong, make sure you have clicked a character");
             }
 
-            manager sheet = new manager(selected);
-            sheet.Show();
-            this.Close();
+           
         }
 
         private void Delete_Click(object sender, RoutedEventArgs e)

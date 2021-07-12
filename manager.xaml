@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="manager" Height="450" Width="800">
     <Grid>
-        <ProgressBar Name="manaDisplay" HorizontalAlignment="Left" Height="23" Margin="241,36,0,0" VerticalAlignment="Top" Width="298" Foreground="#FF0047AB" Background="#FFE6E6E6"/>
+        <ProgressBar Name="manaDisplay" HorizontalAlignment="Left" Height="23" Margin="241,36,0,0" VerticalAlignment="Top" Width="298" Foreground="#FF0047AB" Background="#FFB7D5FF" BorderBrush="#FFB7D5FF"/>
 
         <StackPanel Margin="10,101,354,257" Orientation="Horizontal" RenderTransformOrigin="0.5,0.5">
             <StackPanel.RenderTransform>
@@ -32,5 +32,8 @@
             <Button x:Name = "cast8" Content = "8th" Margin = "10" Width = "120" Height = "30" Tag="11" Click="cast1_Click"/>
             <Button x:Name = "cast9" Content = "9th" Margin = "10" Width = "120" Height = "30" Tag="13" Click="cast1_Click"/>
         </StackPanel>
+        <TextBlock x:Name="name" HorizontalAlignment="Left" Margin="80,36,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Algerian" FontSize="18"/>
+        <TextBlock x:Name="mp" HorizontalAlignment="Left" Margin="561,36,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Algerian" FontSize="18"/>
+
     </Grid>
 </Window>

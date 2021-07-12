@@ -29,6 +29,8 @@ namespace magic
             mage.determineMaxMP();
             //manaDisplay.Foreground = Color.Blue;
             setMana(mage);
+            name.Text = mage.characterName;
+            //nameBlock(mage);
         }
 
         public static void test(CasterModel mage)
@@ -40,6 +42,7 @@ namespace magic
         public void setMana(CasterModel mage)
         {
            manaDisplay.Value = ((double)mage.mp / mage.maxMP) * 100;//manabar gives percentage of spell points left
+            mp.Text = mage.mp.ToString();
            Debug.WriteLine("setMana: "+(double)(mage.mp / mage.maxMP * 100));
             Debug.WriteLine("setMana - current MP is " + mage.mp);
 
@@ -60,5 +63,18 @@ namespace magic
             setMana(mage);
         }
 
+        private void nameBlock(CasterModel mage)
+        {
+            TextBlock name = new TextBlock();
+            //name.TextWrapping = TextWrapping.Wrap;
+            name.Height = 50;
+            name.Width = 200;
+            //name.Text = mage.characterName;
+            name.Inlines.Add(mage.characterName);
+            name.Foreground = new SolidColorBrush(Colors.Red);
+            // LayoutRoot.Children.Add(name);
+            Debug.WriteLine("nameBlock");
+            this.Content = name;
+        }
     }
 }

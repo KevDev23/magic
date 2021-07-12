@@ -17,7 +17,8 @@ namespace magic
     /// </summary>
     public partial class characterLoad : Window
     {
-        List<CasterModel> roster = new List<CasterModel>();
+        List<CasterModel> roster = new List<CasterModel>();//for building list
+        MessageBoxResult confirm;
         public characterLoad()
         {
             InitializeComponent();
@@ -31,16 +32,11 @@ namespace magic
         }
 
         private void Load_Click(object sender, RoutedEventArgs e)
-        {
-            CasterModel selected = new CasterModel();
-            
+        {         
 
             try
             {
-                selected = roster[charList.Items.IndexOf(charList.SelectedItem)];
-                System.Diagnostics.Debug.WriteLine("selected:" + selected.characterName + " mp:" + selected.mp + " level:" + selected.level);
-
-                manager sheet = new manager(selected);
+                manager sheet = new manager(roster[charList.Items.IndexOf(charList.SelectedItem)]);
                 sheet.Show();
                 this.Close();
             }
@@ -54,7 +50,13 @@ namespace magic
 
         private void Delete_Click(object sender, RoutedEventArgs e)
         {
-           
+            confirm = MessageBox.Show("Are you sure?", "Confirmation", MessageBoxButton.YesNo, MessageBoxImage.Question);
+
+            if(confirm == MessageBoxResult.Yes)
+            {
+                SqliteDataAccess.deleteChar(roster[charList.Items.IndexOf(charList.SelectedItem)]);
+            }
+            
         }
 
         private void backToMain(object sender, RoutedEventArgs e)

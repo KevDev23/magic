@@ -26,11 +26,9 @@
             <RowDefinition Height="20" />
         </Grid.RowDefinitions>
 
-        <TextBlock Grid.Column="1" Grid.Row="1" FontSize="25">
-            Welcome to Magic!
-        </TextBlock>
-        <Button x:Name="NewCharacter" Grid.Column="4" Grid.Row="6" VerticalAlignment="Bottom" Content="New Character" Height="121" Margin="0,0,214,210" Click="NewCharacter_Click"></Button>
-        <Button x:Name="LoadCharacter" Grid.Column="4" Grid.Row="6" Content="Load Character" Margin="0,192,214,41" Click="LoadCharacter_Click"></Button>
+
+        <Button x:Name="NewCharacter" Grid.Column="4" Grid.Row="6" VerticalAlignment="Top" Content="New Character" Height="121" Margin="254,38,254,0" Click="NewCharacter_Click"></Button>
+        <Button x:Name="LoadCharacter" Grid.Column="4" Grid.Row="6" Content="Load Character" Margin="254,219,254,50" Click="LoadCharacter_Click"></Button>
 
     </Grid>
 </Window>

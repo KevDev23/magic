@@ -84,6 +84,7 @@ namespace magic
                 mage.level++;
 
            mage.determineMaxMP();
+           setMana(mage);
            updateText(mage);
 
 
@@ -101,12 +102,14 @@ namespace magic
             }
 
             updateText(mage);
+            setMana(mage);
 
         }
 
         private void saveData_Click(object sender, RoutedEventArgs e)
         {
-
+            Debug.WriteLine("calling saveData mp, maxMP, level: " + mage.mp + " " + mage.maxMP + " " + mage.level);
+            SqliteDataAccess.updateChar(mage);
         }
 
         public void updateText(CasterModel mage)

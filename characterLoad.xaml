@@ -7,9 +7,13 @@
         mc:Ignorable="d"
         Title="characterLoad" Height="450" Width="800">
     <Grid>
-        <Button x:Name="Load" VerticalAlignment="Bottom" Content="Load" Height="36" Margin="32,0,624,62" Click="Load_Click"/>
-        <Button x:Name="Delete" VerticalAlignment="Bottom" Content="Delete" Height="36" Margin="611,0,45,62" Click="Delete_Click"/>
-        <Button x:Name="Back" VerticalAlignment="Top" Content="Back" Height="36" Margin="328,336,328,0" Click="backToMain"/>
+        <StackPanel Orientation="Horizontal" Margin="114,311,114,0">
+            <Button x:Name="Load" Content="Load" Height="30" Width="120" Margin="30" Click="Load_Click" HorizontalAlignment="Stretch"/>
+            <Button x:Name="Back" Content="Back" Height="30" Width="120" Margin="30" Click="backToMain" HorizontalAlignment="Center"/>
+            <Button x:Name="Delete" Content="Delete" Height="30" Width="120" Margin="30" Click="Delete_Click" HorizontalAlignment="Right"/>
+
+        </StackPanel>
+       
         <ListBox Name="charList" Margin="90,22,90,124"/>
 
     </Grid>

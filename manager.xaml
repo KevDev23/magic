@@ -42,7 +42,7 @@
             <Button x:Name = "leveldown" Content="Level Down" Margin="10" Width="120" Height="30" Click="leveldown_Click" />
             <Button x:Name="saveData" Content="Save" Margin="10" Width="120" Height="30" Click="saveData_Click" />
         </StackPanel>
-        <TextBlock x:Name="name" HorizontalAlignment="Left" Margin="80,36,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Algerian" FontSize="18"/>
+        <TextBlock x:Name="name" HorizontalAlignment="Left" Margin="63,36,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Algerian" FontSize="18"/>
         <TextBlock x:Name="mp" HorizontalAlignment="Left" Margin="561,36,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Algerian" FontSize="18"/>
         <TextBlock x:Name="level" HorizontalAlignment="Left" Margin="528,111,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Algerian" FontSize="18"/>
 

@@ -28,6 +28,23 @@ namespace magic
             }
         }
 
+        public static void updateChar(CasterModel character)
+        {
+            using (System.Data.IDbConnection conn = new SQLiteConnection(loadConnStr()))
+            {
+                System.Diagnostics.Debug.WriteLine("updateChar name, mp, max, level:"+ character.characterName + " " + character.mp + " " + character.maxMP + " " + character.level);
+                conn.Execute("update casters set level = @level, mp = @mp where characterName = @characterName", character);
+            }
+        }
+
+        public static void deleteChar(CasterModel character)
+        {
+            using (System.Data.IDbConnection conn = new SQLiteConnection(loadConnStr()))
+            {
+                System.Diagnostics.Debug.WriteLine("deleteChar name, mp, max, level:" + character.characterName + " " + character.mp + " " + character.maxMP + " " + character.level);
+                conn.Execute("delete from casters where characterName = @characterName", character);
+            }
+        }
         private static String loadConnStr(string id = "Default")
         {
             return ConfigurationManager.ConnectionStrings[id].ConnectionString;

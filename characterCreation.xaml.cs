@@ -13,9 +13,6 @@ using System.Diagnostics;
 
 namespace magic
 {
-    /*TODO:
-        Handling if a user inputs a decimal 
-    */
 
     /// <summary>
     /// Interaction logic for characterCreation.xaml
@@ -46,7 +43,9 @@ namespace magic
 
                     SqliteDataAccess.saveChar(newCharacter);//write to data base
 
-                    Debug.WriteLine("name,level,maxmp " + newCharacter.characterName + " " + newCharacter.level + " " + newCharacter.mp);
+                    manager sheet = new manager(newCharacter);
+                    sheet.Show();
+                    this.Close();
                 }
                 else
                 {
@@ -61,7 +60,6 @@ namespace magic
 
         private void BackToMain(object sender, RoutedEventArgs e)
         {
-            //exiting character creation without making a new character
             this.Close();
         }
 

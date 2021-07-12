@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Diagnostics;
 
 namespace magic
 {
@@ -28,13 +29,16 @@ namespace magic
         //For making new character to save
         private void NewCharacter_Click(object sender, RoutedEventArgs e)
         {
-            
+            characterCreation creationWin = new characterCreation();
+            creationWin.Show();
         }
 
         //load a character
         private void LoadCharacter_Click(object sender, RoutedEventArgs e)
         {
-
+            characterLoad loadWin = new characterLoad();
+            loadWin.Show();
+           
         }
     }
 }

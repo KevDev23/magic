@@ -4,6 +4,22 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <UseWPF>true</UseWPF>
+   
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="pcDB.db" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="pcDB.db">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Dapper" Version="2.0.90" />
+    <PackageReference Include="System.Data.SQLite.Core" Version="1.0.114.3" />
+  </ItemGroup>
 
 </Project>

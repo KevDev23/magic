@@ -1,0 +1,20 @@
+﻿<Window x:Class="magic.characterLoad"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:magic"
+        mc:Ignorable="d"
+        Title="characterLoad" Height="450" Width="800">
+    <Grid>
+        <StackPanel Orientation="Horizontal" Margin="114,311,114,0">
+            <Button x:Name="Load" Content="Load" Height="30" Width="120" Margin="30" Click="Load_Click" HorizontalAlignment="Stretch"/>
+            <Button x:Name="Back" Content="Back" Height="30" Width="120" Margin="30" Click="backToMain" HorizontalAlignment="Center"/>
+            <Button x:Name="Delete" Content="Delete" Height="30" Width="120" Margin="30" Click="Delete_Click" HorizontalAlignment="Right"/>
+
+        </StackPanel>
+       
+        <ListBox Name="charList" Margin="90,22,90,124"/>
+
+    </Grid>
+</Window>

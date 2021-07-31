@@ -24,9 +24,12 @@ namespace magic
         {
             InitializeComponent();
 
+            Debug.WriteLine("setMana: " + (double)(mage.mp / mage.maxMP * 100));
             mage = selected;
             mage.determineMaxMP();
             updateText(mage);
+            
+
             setMana(mage);
 
         }
@@ -38,7 +41,7 @@ namespace magic
            updateText(mage);
            Debug.WriteLine("setMana: "+(double)(mage.mp / mage.maxMP * 100));
            Debug.WriteLine("setMana - current MP is " + mage.mp);
-
+           
         }
 
         public void incrementMana(int add)
@@ -114,7 +117,7 @@ namespace magic
 
         public void updateText(CasterModel mage)
         {
-            //setMana(mage);
+            setMana(mage);
             name.Text = mage.characterName;
             level.Text = "Level: " + mage.level.ToString();
             mp.Text = mage.mp.ToString() + "/" + mage.maxMP.ToString();

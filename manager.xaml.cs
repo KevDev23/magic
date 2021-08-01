@@ -19,18 +19,16 @@ namespace magic
     public partial class manager : Window
     {
         CasterModel mage = new CasterModel();
-        double test = 0;
+        
         public manager(CasterModel selected)
         {
-            Debug.WriteLine("before InitializeComponent: " + (double)(selected.mp / selected.maxMP * 100));
+           // Debug.WriteLine("before InitializeComponent: " + (double)(selected.mp / selected.maxMP * 100));
 
             InitializeComponent();
 
             mage = selected;
             mage.determineMaxMP();
             updateText(mage);
-            
-
             setMana(mage);
 
         }
@@ -38,9 +36,7 @@ namespace magic
         //initializes the mana bar(manaDisplay) based on percentage of mag.maxMP and text display
         public void setMana(CasterModel mage)
         {
-           test = ((double)mage.mp / mage.maxMP) * 100;
-            Debug.WriteLine("test is " + test);
-           manaDisplay.Value = test;// ((double)mage.mp / mage.maxMP) * 100;//manabar gives percentage of spell points left
+           manaDisplay.Value = ((double)mage.mp / mage.maxMP) * 100;//manabar gives percentage of spell points left
            updateText(mage);
            Debug.WriteLine("setMana: "+(double)(mage.mp / mage.maxMP * 100));
            Debug.WriteLine("setMana - current MP is " + mage.mp);
